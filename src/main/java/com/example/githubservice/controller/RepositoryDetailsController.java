@@ -12,8 +12,8 @@ public class RepositoryDetailsController {
     @Autowired
     private RepositoryDetailsService service;
 
-    @GetMapping("/repositories/{owner}/{repoName}")
-    public RepositoryDetails getRepositoryDetails(@PathVariable String owner, @PathVariable String repoName) {
-        return service.getRepositoryDetails(owner, repoName);
+    @GetMapping("/repositories/{ownerName}/{repositoryName}")
+    public RepositoryDetails getRepositoryDetails(@PathVariable String ownerName, @PathVariable String repositoryName) {
+        return service.getRepositoryDetails(ownerName, repositoryName);
     }
 }

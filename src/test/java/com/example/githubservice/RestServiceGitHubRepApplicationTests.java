@@ -16,7 +16,7 @@ class RestServiceGitHubRepApplicationTests {
 
 	@Test
 	public void testGetRepositoryDetails() {
-		ResponseEntity<RepositoryDetails> response = restTemplate.getForEntity("/repositories/octocat/Hello-World", RepositoryDetails.class);
+		ResponseEntity<RepositoryDetails> response = restTemplate.getForEntity("/repositories/bhushankandagatla/Spring-Boot", RepositoryDetails.class);
 		assertThat(response.getStatusCode().is2xxSuccessful()).isTrue();
 		assertThat(response.getBody()).isNotNull();
 	}
